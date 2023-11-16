@@ -1,12 +1,14 @@
 //your JS code here. If required.
-function incrementCounter() {
-      // Get the current counter value
-      const counterElement = document.getElementById('counter');
-      const currentCounterValue = parseInt(counterElement.textContent, 10);
+const counter = document.querySelector("#counter");
+const btn = document.querySelector("#incrementBtn");
 
-      // Display the un-incremented value in an alert
-      alert( currentCounterValue);
+let count= 0;
+btn.addEventListener("click",function(){
 
-      // Increment the counter value and update the display
-      counterElement.textContent = currentCounterValue + 1;
-    }
+  counter.value = count;
+  alert(count)
+  count++
+  counter.innerText = count
+  
+
+})
