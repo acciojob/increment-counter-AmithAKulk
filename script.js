@@ -1,14 +1,13 @@
 //your JS code here. If required.
-const counter = document.querySelector("#counter");
-const btn = document.querySelector("#incrementBtn");
+let start =0;
+document.getElementById('counter').innerText=start;
 
-let count= 0;
-btn.addEventListener("click",function(){
+const increment = function () {
+	alert(start);
+	start++;
+	document.getElementById('counter').innerText=start;	
+}
 
-  counter.value = count;
-  alert(count)
-  count++
-  counter.innerText = count
-  
-
+document.querySelector('button').addEventListener('click',()=>{
+increment()
 })
